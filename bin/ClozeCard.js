@@ -8,7 +8,7 @@
     if (this instanceof ClozeCard) {
         this.cloze = cloze;
         this.fullText = fullText;
-        createQuestion(fullText, cloze);
+        this.partial = createQuestion(fullText, cloze);
     }
     else {
         return new ClozeCard(fullText, cloze);
@@ -21,7 +21,8 @@
             this.begins = fullText.slice(0, x);
             this.ends = fullText.slice(y);
             blanks = "...";
-            this.partial = this.begins + blanks + this.ends;
+            part = this.begins + blanks + this.ends;
+            return part;
             console.log(`  >> partial: ${this.partial}`);
         } else {
             // No substrings matching the cloze...

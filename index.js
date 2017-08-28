@@ -5,6 +5,16 @@
  *-------------------------------------->8------------------------------------*/
 
 var ClozeCard = require('./bin/ClozeCard.js');
-var FlashCard = new ClozeCard("A needle in a haystack.", "needle");
+var ClozeFlash = new ClozeCard("A needle in a haystack.", "needle");
 
-console.log(FlashCard);
+console.log(ClozeFlash);
+
+var BasicCard = require('./bin/BasicCard.js');
+var BasicFlash = new BasicCard("What is bountiful inside a haystack?", "needles.");
+
+console.log(BasicFlash);
+
+//var ClozeErr = new ClozeCard("My hands are like a box of thumbs.", "fingers");
+// should've thrown an error
+//console.log(ClozeErr);
+
